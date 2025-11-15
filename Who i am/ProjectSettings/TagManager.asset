@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Floor
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2112169469
+    locked: 0
+  - name: Front
+    uniqueID: 307600349
     locked: 0
   - name: Default
     uniqueID: 0
