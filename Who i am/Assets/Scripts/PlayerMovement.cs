@@ -56,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
         // Reset de saltos
         if (enSuelo)
             contadorSaltos = maxSaltos;
+        if (enPared)
+            contadorSaltos = maxSaltos;
 
         // Wall slide
         deslizando = !enSuelo && enPared && entradaHorizontal != 0f;
@@ -92,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ControlarSalto()
     {
-        // SALTO NORMAL + DOBLE SALTO
+        // Salto normal y doble salto
         if (entradaSalto && contadorSaltos > 0 && !deslizando)
         {
             contadorSaltos--;
@@ -100,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        // SALTO DE PARED
+        // Sakto desde pared
         if (entradaSalto && deslizando)
         {
             float direccion = MirandoALaDerecha() ? -1 : 1;

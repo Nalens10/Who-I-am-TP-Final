@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3fc07491abeba864c86723d8e0ed9d5a
+guid: cb9306acbeee32b4690c0cce41354320
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 7
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Skeleton-Hurt_0
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 43
-        width: 28
-        height: 15
-      alignment: 9
-      pivot: {x: 0.38, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76c5eaa3d1cef1b419ec0370bec8eeaf
-      internalID: 1895733656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton-Hurt_1
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 43
-        width: 28
-        height: 15
-      alignment: 9
-      pivot: {x: 0.37, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce51cbb9a28dc3749809e9ef3e954ac6
-      internalID: -758791672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton-Hurt_2
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 43
-        width: 28
-        height: 15
-      alignment: 9
-      pivot: {x: 0.38, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b580c99d95441c34bb360c4a4717a3df
-      internalID: -1885657787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton-Hurt_3
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 43
-        width: 28
-        height: 15
-      alignment: 9
-      pivot: {x: 0.38, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a990459a10806d40bdc96dea166599e
-      internalID: 1881269283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,11 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Skeleton-Hurt_0: 1895733656
-      Skeleton-Hurt_1: -758791672
-      Skeleton-Hurt_2: -1885657787
-      Skeleton-Hurt_3: 1881269283
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
