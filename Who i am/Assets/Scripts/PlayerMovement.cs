@@ -64,8 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (deslizando)
         {
-            rb2D.velocity = new Vector2(rb2D.velocity.x,
-                Mathf.Clamp(rb2D.velocity.y, -velocidadDeslizamiento, float.MaxValue));
+            rb2D.velocity = new Vector2(rb2D.velocity.x,Mathf.Clamp(rb2D.velocity.y, -velocidadDeslizamiento, float.MaxValue));
         }
 
         ControlarAnimaciones();
