@@ -19,10 +19,10 @@ public class PlayerSpecial : MonoBehaviour
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashDuration;
     [SerializeField] private float dashCooldown;
-    [SerializeField] private int dashDamagen;
+    [SerializeField] private int dashDamage;
 
+    private bool dashCanHit = false;
     private bool canDash = true;
-    private bool isDashing = false;
 
     [Header("Parry Configuracion")]
     [SerializeField] private float parryDuration;
@@ -31,7 +31,6 @@ public class PlayerSpecial : MonoBehaviour
 
     private bool perfectParry = false;
     private bool canParry = true;
-    private bool isParrying = false;
 
     [Header("Habilidades Especiales")]
     [SerializeField] private float specialRange;
@@ -66,11 +65,24 @@ public class PlayerSpecial : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!dashCanHit) return;
+
+        EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
+
+        if (enemy != null)
+        {
+            enemy.TomarDaño(dashDamage, transform);  //pasa el daño y el jugador como sender
+            dashCanHit = false;  //solo 1 impacto por dash
+        }
+    }
+
 
     private IEnumerator DashRoutine(Vector2 direction)
     {
         canDash = false;
-        isDashing = true;
+        dashCanHit = true;
 
         animator.SetBool(dashParam, true);
         animatorE.SetBool(dashParam, true);
@@ -87,11 +99,14 @@ public class PlayerSpecial : MonoBehaviour
 
         rb.velocity = direction * finalSpeed;
 
+        
+
         yield return new WaitForSeconds(dashDuration);
 
         rb.velocity = Vector2.zero;
         rb.gravityScale = originalGravity;
-        isDashing = false;
+
+        dashCanHit = false;
 
         animator.SetBool(dashParam, false);
         animatorE.SetBool(dashParam, false);
@@ -114,7 +129,6 @@ public class PlayerSpecial : MonoBehaviour
     private IEnumerator ParryRoutine()
     {
         canParry = false;
-        isParrying = true;
         perfectParry = false; // Reset al iniciar
 
         animator.SetBool(parryParam, true);
@@ -128,7 +142,6 @@ public class PlayerSpecial : MonoBehaviour
         if (perfectParry)
         {
             ToggleInvulnerability(false);
-            isParrying = false;
             animator.SetBool(parryParam, false);
             animatorE.SetBool(parryParam, false);
 
@@ -144,7 +157,6 @@ public class PlayerSpecial : MonoBehaviour
 
         // Fin del parry
         ToggleInvulnerability(false);
-        isParrying = false;
         animator.SetBool(parryParam, false);
         animatorE.SetBool(parryParam, false);
 
@@ -170,7 +182,7 @@ public class PlayerSpecial : MonoBehaviour
 
         foreach (var enemy in hits)
         {
-            enemy.GetComponent<EnemyHealth>()?.TakeDamage(specialDamage);
+            enemy.GetComponent<EnemyHealth>()?.TomarDaño(specialDamage, transform);
         }
     }
 

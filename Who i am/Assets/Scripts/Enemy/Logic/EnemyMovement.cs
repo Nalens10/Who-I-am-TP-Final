@@ -28,11 +28,12 @@ public class EnemyMovement : MonoBehaviour
     private float tiempoAEsperarActual;
 
     [Header("Saltar")]
+    [SerializeField] private bool puedeSaltar;
     [SerializeField] private float fuerzaSalto;
     [SerializeField] private Vector2 dimensionesCaja;
     [SerializeField] private Transform controladorEstaEnSuelo;
     [SerializeField] private bool estaEnElSuelo;
-    [SerializeField] private bool puedeSaltar = true;
+    
 
     [Header("Ocupar")]
     [SerializeField] private float tiempoParaDesocupar;

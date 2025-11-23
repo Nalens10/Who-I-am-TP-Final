@@ -1343,7 +1343,7 @@ MonoBehaviour:
   dashSpeed: 15
   dashDuration: 0.5
   dashCooldown: 0.7
-  dashDamagen: 1
+  dashDamage: 2
   parryDuration: 0.3
   parryCooldown: 1.5
   parryPerfectDuration: 0.2
@@ -10056,8 +10056,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07786dd5b80c1b44b67698840a09fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2D: {fileID: 423769479}
+  animator: {fileID: 1541170553}
+  movimientoEnemigo: {fileID: 423769476}
   vidaMaxima: 10
   vidaActual: 0
+  fuerzaRetroceso: {x: 1, y: 2}
+  tiempoMinimoRetroceso: 0.25
 --- !u!114 &423769475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10098,12 +10103,12 @@ MonoBehaviour:
   distanciaRayoSuelo: 1
   tocandoSuelo: 0
   tiempoAEsperar: 1
+  puedeSaltar: 0
   fuerzaSalto: 1
   dimensionesCaja: {x: 1.29, y: -0.24}
   controladorEstaEnSuelo: {fileID: 1054824898}
   estaEnElSuelo: 1
-  puedeSaltar: 0
-  tiempoParaDesocupar: 1
+  tiempoParaDesocupar: 0
 --- !u!70 &423769478
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10116,7 +10121,7 @@ CapsuleCollider2D:
   m_Material: {fileID: 6200000, guid: 5f8e5aa4040bf3c45be4ee688fb60a61, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
