@@ -1242,8 +1242,10 @@ Transform:
   m_Children:
   - {fileID: 1453207329}
   - {fileID: 377570542}
+  - {fileID: 1353768290}
   - {fileID: 1383147822}
   - {fileID: 1507090134}
+  - {fileID: 1546200331}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &331857979
@@ -1322,6 +1324,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31debf7bea523342b325700b8c04d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1141999204}
+  ataquesJugador:
+  - tipoDeAtaque: 1
+    nombreAtaque: Estocada
+    "cantidadDeDa\xF1o": 2
+    controladorAtaque: {fileID: 377570542}
+    stringAnimacion: Ataque1
+    radioAtaque: 0
+    dimensionesCaja: {x: 2, y: 0.5}
+  - tipoDeAtaque: 0
+    nombreAtaque: Corte
+    "cantidadDeDa\xF1o": 4
+    controladorAtaque: {fileID: 1353768290}
+    stringAnimacion: Ataque2
+    radioAtaque: 1.5
+    dimensionesCaja: {x: 0, y: 0}
+  tiempoEntreAtaques: 0.35
+  tiempoUltimoAtaque: -0.35
+  ventanaDeCombo: 1
+  indiceCombo: 0
+  tiempoEntreCombos: 2
+  tiempoBufferEntrada: 0.25
 --- !u!114 &331857982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9848,7 +9872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 377570542}
   m_Layer: 6
-  m_Name: Combat Control
+  m_Name: Combat Control 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9863,7 +9887,7 @@ Transform:
   m_GameObject: {fileID: 377570541}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12649,6 +12673,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1353768289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353768290}
+  m_Layer: 6
+  m_Name: Combat Control 2
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1353768290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353768289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 331857978}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1383147821
 GameObject:
   m_ObjectHideFlags: 0
@@ -13062,6 +13117,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1546200330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1546200331}
+  m_Layer: 6
+  m_Name: Dash Control
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1546200331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546200330}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 331857978}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1556663972
 GameObject:
   m_ObjectHideFlags: 0

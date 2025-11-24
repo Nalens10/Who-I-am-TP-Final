@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour, IGolpeable
 {
     [Header("Referencias")]
     [SerializeField] private Rigidbody2D rb2D;
